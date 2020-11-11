@@ -1,7 +1,7 @@
 # Личный проект «Кэт энерджи» [![Build status][travis-image]][travis-url] [![Dependency status][dependency-image]][dependency-url]
 
 * Студент: [Ирина Якубовская](https://up.htmlacademy.ru/adaptive/21/user/1507717).
-* Наставник: `Неизвестно`.
+* Наставник: [Сергей Зубов](https://github.com/captain-zsa).
 
 ---
 
