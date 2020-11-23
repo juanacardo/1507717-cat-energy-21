@@ -31,92 +31,94 @@
     </header>
 
     <main class="page-main">
-      <h1 class="page__header">Подбор программы</h1>
-      <form class="form form__wrapper" action="https://echo.htmlacademy.ru" method="get">
-        <fieldset class="form__fieldset form__fieldset--padding">
-          <legend class="form__legend-userinfo">Заполните анкету, и мы подберем программу питания для вашего кота</legend>
-          <ul class="form-text">
-            <li class="form-text__item">
-              <label class="form-text__label">Имя:*
-                <input class="form-text__input" type="text" name="name" placeholder="Барсик" required>
-              </label>
-            </li>
-            <li class="form-text__item">
-              <label class="form-text__label">Вес (кг):*
-                <input class="form-text__input" type="text" name="weigth" placeholder="7" required>
-              </label>
-            </li>
-            <li class="form-text__item">
-              <label class="form-text__label">Возраст (лет):
-                <input class="form-text__input" type="text" name="age" placeholder="7">
-              </label>
-            </li>
-          </ul>
-        </fieldset>
+      <section class="order">
+        <h1 class="title">Подбор программы</h1>
+        <p class="order__text">Заполните анкету, и мы подберем программу питания для вашего кота</p>
+        <form class="form form__wrapper" action="https://echo.htmlacademy.ru" method="get">
+          <fieldset class="order__cat-data">
+            <legend class="visually-hidden">Введите данные кота</legend>
 
-        <fieldset class="form__fieldset form__fieldset--padding">
-          <ul class="form-radio">
-            <li class="form-radio__item">
-              <input class="form-radio__input" type="radio" name="weight" id="lose-weight" checked>
-              <label class="form-radio__label" for="lose-weight">Похудение</label>
-            </li>
-            <li class="form-radio__item">
-              <input class="form-radio__input" type="radio" name="weight" id="get-weight">
-              <label class="form-radio__label" for="get-weight">Набор массы</label>
-            </li>
-            <li class="form-radio__item">
-              <input class="form-radio__input" type="radio" name="weight" id="dontknow">
-              <label class="form-radio__label" for="dontknow">Не знаю (нужен ваш совет)</label>
-            </li>
-          </ul>
-        </fieldset>
+            <label class="input-text order__input-text">
+              <span>Имя:*</span>
+              <input type="text" name="name" placeholder="Барсик" required>
+            </label>
 
-        <fieldset class="form__fieldset">
-          <legend class="form__legend">Контактные данные (владельца кота)</legend>
-          <ul class="form-text">
-            <li class="form-text__item">
-              <label class="form-text__label">E-mail:*
-                <input class="form-text__input form-text__input--email" type="email" name="email" placeholder="kuklachev@gmail.com" required>
-              </label>
-            </li>
-            <li class="form-text__item">
-              <label class="form-text__label">Телефон:*
-                <input class="form-text__input form-text__input--tel" type="tel" name="tel" placeholder="8 (960) 900-60-90" required>
-              </label>
-            </li>
-          </ul>
-        </fieldset>
+            <label class="input-text order__input-text">
+              <span>Вес (кг):*</span>
+              <input type="text" name="weigth" placeholder="7" required>
+            </label>
 
-        <fieldset class="form__fieldset">
-          <legend class="form__legend">Комментарий</legend>
-          <textarea class="comment" name="comment" placeholder="Расскажите обо всех повадках кота"></textarea>
-        </fieldset>
+            <label class="input-text">
+              <span>Возраст (лет):</span>
+              <input type="text" name="age" placeholder="7">
+            </label>
+          </fieldset>
 
-        <fieldset class="form__fieldset">
-          <legend class="form__legend">Дополнительно</legend>
-          <ul class="form-checkbox">
-            <li class="form-checkbox__item">
-              <input class="form-checkbox__input" type="checkbox" name="sweetener" id="sweetener" checked>
-              <label class="form-checkbox__label" for="sweetener">Сахарозаменитель</label>
-            </li>
-            <li class="form-checkbox__item">
-              <input class="form-checkbox__input" type="checkbox" name="water" id="water">
-              <label class="form-checkbox__label" for="water">Питьевая вода</label>
-            </li>
-            <li class="form-checkbox__item">
-              <input class="form-checkbox__input" type="checkbox" name="milk" id="milk">
-              <label class="form-checkbox__label" for="milk">Молоко</label>
-            </li>
-            <li class="form-checkbox__item">
-              <input class="form-checkbox__input" type="checkbox" name="vitamine" id="vitamine">
-              <label class="form-checkbox__label" for="vitamine">Витамины</label>
-            </li>
-          </ul>
-        </fieldset>
-        <button class="button form__button" type="submit" aria-label="Подобрать программу питания">Отправить заявку</button>
-        <p class="form__footnote">* — Обязательные поля</p>
-      </form>
+          <fieldset class="order__goal">
+            <legend class="visually-hidden">Выберите цель</legend>
+            <label class="choice order__choice">
+              <input type="radio" name="weight" value="lose-weight" checked>
+              <span>Похудение</span>
+            </label>
+
+            <label class="choice order__choice">
+              <input type="radio" name="weight" value="get-weight">
+              <span>Набор массы</span>
+            </label>
+
+            <label class="choice order__choice">
+              <input type="radio" name="weight" value="dontknow">
+              <span>Не знаю (нужен ваш совет)</span>
+            </label>
+          </fieldset>
+
+          <fieldset class="order__contacts">
+            <legend class="title-decorated order__contacts-title">Контактные данные (владельца кота)</legend>
+            <label class="input-text input-text--email order__input-text">
+              <span>E-mail:*</span>
+              <input type="email" name="email" placeholder="kuklachev@gmail.com" required>
+            </label>
+
+            <label class="input-text input-text--phone">
+              <span>Телефон:*</span>
+              <input type="tel" name="tel" placeholder="8 (960) 900-60-90" required>
+            </label>
+          </fieldset>
+
+          <fieldset class="order__comment">
+            <legend class="title-decorated order__comment-title">Комментарий</legend>
+            <textarea class="comment" name="comment" placeholder="Расскажите обо всех повадках кота"></textarea>
+          </fieldset>
+
+          <fieldset class="order__more">
+            <legend class="title-decorated order__more-title">Дополнительно</legend>
+            <label class="choice choise--check order__choice">
+              <input type="checkbox" name="sweetener" checked>
+              <span>Сахарозаменитель</span>
+            </label>
+
+            <label class="choice choise--check order__choice">
+              <input type="checkbox" name="water">
+              <span>Питьевая вода</span>
+            </label>
+
+            <label class="choice choise--check order__choice">
+              <input type="checkbox" name="milk">
+              <span>Молоко</span>
+            </label>
+
+            <label class="choice choise--check order__choice">
+              <input type="checkbox" name="vitamine">
+              <span>Витамины</span>
+            </label>
+          </fieldset>
+
+          <button class="button order__button" type="submit" aria-label="Подобрать программу питания">Отправить заявку</button>
+          <p class="order__footnote">* — Обязательные поля</p>
+        </form>
+      </section>
     </main>
+
     <footer class="page-footer">
       <div class="page-footer__wrapper">
         <section class="contacts">
