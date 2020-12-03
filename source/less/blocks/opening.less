@@ -1,4 +1,8 @@
 .opening__wrapper {
+  .box-sizing;
+  position: relative;
+  padding-right: 20px;
+  padding-left: 20px;
   &::before {
     content: "";
     width: 320px;
@@ -9,10 +13,6 @@
     z-index: -1;
     background-image: linear-gradient(to top, fade(@basic-green, 85%), fade(@basic-green, 85%)), url("../img/opening-cat.jpg");
   }
-  position: relative;
-  box-sizing: border-box;
-  padding-right: 20px;
-  padding-left: 20px;
 }
 
 .opening__title {
@@ -20,7 +20,7 @@
 }
 
 .opening__text {
-  font-family: "Oswald", "Arial", sans-serif;
+  font-family: @oswald;
   font-weight: 400;
   font-size: 14px;
   line-height: 14px;
