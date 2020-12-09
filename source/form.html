@@ -33,8 +33,10 @@
 
     <main class="page-main">
       <section class="order">
-        <h1 class="title">Подбор программы</h1>
-        <p class="order__text">Заполните анкету, и мы подберем программу питания для вашего кота</p>
+        <div class="order__header-wrapper">
+          <h1 class="title">Подбор программы</h1>
+          <p class="order__text">Заполните анкету, и мы подберем программу питания для вашего кота</p>
+        </div>
         <form class="form form__wrapper" action="https://echo.htmlacademy.ru" method="get">
           <fieldset class="order__cat-data">
             <legend class="visually-hidden">Введите данные кота</legend>
@@ -67,7 +69,7 @@
               <span>Набор массы</span>
             </label>
 
-            <label class="choice order__choice">
+            <label class="choice">
               <input type="radio" name="weight" value="dontknow">
               <span>Не знаю (нужен ваш совет)</span>
             </label>
@@ -75,43 +77,49 @@
 
           <fieldset class="order__contacts">
             <legend class="title-decorated order__contacts-title">Контактные данные (владельца кота)</legend>
-            <label class="input-text input-text--email order__input-text">
-              <span>E-mail:*</span>
-              <input type="email" name="email" placeholder="kuklachev@gmail.com" required>
-            </label>
+            <div class="order__fieldset-wrapper">
+              <label class="input-text input-text--email order__input-text">
+                <span>E-mail:*</span>
+                <input type="email" name="email" placeholder="kuklachev@gmail.com" required>
+              </label>
 
-            <label class="input-text input-text--phone">
-              <span>Телефон:*</span>
-              <input type="tel" name="tel" placeholder="8 (960) 900-60-90" required>
-            </label>
+              <label class="input-text input-text--phone">
+                <span>Телефон:*</span>
+                <input type="tel" name="tel" placeholder="8 (960) 900-60-90" required>
+              </label>
+            </div>
           </fieldset>
 
           <fieldset class="order__comment">
             <legend class="title-decorated order__comment-title">Комментарий</legend>
-            <textarea class="comment" name="comment" placeholder="Расскажите обо всех повадках кота"></textarea>
+            <div class="order__fieldset-wrapper">
+              <textarea class="comment" name="comment" placeholder="Расскажите обо всех повадках кота"></textarea>
+            </div>
           </fieldset>
 
           <fieldset class="order__more">
             <legend class="title-decorated order__more-title">Дополнительно</legend>
-            <label class="choice choice--check order__choice">
-              <input type="checkbox" name="sweetener" checked>
-              <span>Сахарозаменитель</span>
-            </label>
+            <div class="order__fieldset-wrapper">
+              <label class="choice choice--check order__choice">
+                <input type="checkbox" name="sweetener" checked>
+                <span>Сахарозаменитель</span>
+              </label>
 
-            <label class="choice choice--check order__choice">
-              <input type="checkbox" name="water">
-              <span>Питьевая вода</span>
-            </label>
+              <label class="choice choice--check order__choice">
+                <input type="checkbox" name="water">
+                <span>Питьевая вода</span>
+              </label>
 
-            <label class="choice choice--check order__choice">
-              <input type="checkbox" name="milk">
-              <span>Молоко</span>
-            </label>
+              <label class="choice choice--check order__choice">
+                <input type="checkbox" name="milk">
+                <span>Молоко</span>
+              </label>
 
-            <label class="choice choice--check order__choice">
-              <input type="checkbox" name="vitamine">
-              <span>Витамины</span>
-            </label>
+              <label class="choice choice--check">
+                <input type="checkbox" name="vitamine">
+                <span>Витамины</span>
+              </label>
+          </div>
           </fieldset>
 
           <button class="button order__button" type="submit" aria-label="Подобрать программу питания">Отправить заявку</button>
@@ -124,7 +132,7 @@
       <div class="page-footer__wrapper">
         <section class="contacts">
           <h2 class="visually-hidden">Контакты организации</h2>
-          <div class="contacts__text">
+          <div class="contacts__text contacts__text--inner-background">
             <p class="contacts__invitation">Приглашаем к сотрудничеству дилеров!</p>
             <p class="contacts__address">ул. Большая Конюшенная, д. 19/8 Санкт-Петербург</p>
           </div>
