@@ -1,5 +1,9 @@
 .contacts__text {
-  padding: 28px 19px 22px 19px;
+  padding-top: 28px;
+  padding-right: 19px;
+  padding-bottom: 22px;
+  padding-left: 19px;
+  display: flex;
 
   &--inner-background {
     background-color: @basic-grey;
@@ -13,8 +17,23 @@
   line-height: 18px;
   text-transform: uppercase;
   color: @special-dark-grey-2;
+
+  @media (min-width: @tablet-width) {
+    font-size: 20px;
+    line-height: 21px;
+  }
 }
 
 .contacts__address {
   color: @special-dark-grey;
+
+  @media (min-width: @tablet-width) {
+    font-size: 16px;
+    line-height: 21px;
+    text-align: right;
+  }
+
+  @media (min-width: @tablet-width) {
+    text-align: left;
+  }
 }
