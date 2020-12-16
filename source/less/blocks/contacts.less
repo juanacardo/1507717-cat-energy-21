@@ -1,9 +1,19 @@
 .contacts__text {
-  padding-top: 28px;
+  padding-top: 27px;
   padding-right: 19px;
   padding-bottom: 22px;
   padding-left: 19px;
   display: flex;
+
+  @media (min-width: @tablet-width) {
+    padding-right: 72px;
+    padding-left: 71px;
+  }
+
+  @media (min-width: @tablet-width) {
+    padding-right: 89px;
+    padding-left: 76px;
+  }
 
   &--inner-background {
     background-color: @basic-grey;
@@ -14,9 +24,11 @@
   font-family: @oswald;
   font-weight: 400;
   font-size: 16px;
-  line-height: 18px;
+  line-height: 20px;
   text-transform: uppercase;
   color: @special-dark-grey-2;
+  margin: 0;
+  width: 50%;
 
   @media (min-width: @tablet-width) {
     font-size: 20px;
@@ -26,6 +38,9 @@
 
 .contacts__address {
   color: @special-dark-grey;
+  margin: 0;
+  width: 50%;
+  padding-top: 2px;
 
   @media (min-width: @tablet-width) {
     font-size: 16px;

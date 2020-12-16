@@ -1,9 +1,25 @@
+.table {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 34px;
+}
+
+.table__wrapper {
+  position: relative;
+  border: 1px solid @special-grey-1;
+  border-radius: 3px;
+  width: 124px;
+  height: 56px;
+  text-align: center;
+}
+
 .table__value {
   font-family: @oswald;
   font-weight: 400;
   font-size: 24px;
   line-height: 24px;
   text-transform: uppercase;
+  padding-top: 15px;
 
   @media (min-width: @tablet-width) {
     font-size: 30px;
@@ -15,6 +31,14 @@
   font-size: 12px;
   line-height: 12px;
   color: @special-dark-grey;
+  background-color: @special-grey-3;
+  width: 87px;
+  height: 26px;
+  position: absolute;
+  margin: 0;
+  top: 47px;
+  left: 49%;
+  transform: translateX(-49%);
 
   @media (min-width: @tablet-width) {
     font-size: 14px;

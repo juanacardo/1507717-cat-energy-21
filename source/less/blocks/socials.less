@@ -1,5 +1,6 @@
 .socials__wrapper {
   display: flex;
+  align-items: center;
   border-bottom: 1px solid @border-grey;
 
   @media (min-width: @tablet-width) {
@@ -18,9 +19,17 @@
 }
 
 .socials__item {
-  margin-right: 35px;
+  margin-right: 34px;
+  padding-top: 6px;
+  height: 61px;
+  display: flex;
 
   &:last-child {
     margin-right: 0;
+  }
+
+  a {
+    display: block;
+    margin: auto;
   }
 }
