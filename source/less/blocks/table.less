@@ -1,7 +1,16 @@
 .table {
   display: flex;
   justify-content: space-between;
-  margin-bottom: 34px;
+  margin-bottom: 48px;
+  margin-top: 0;
+
+   @media (min-width: @tablet-width) {
+    width: 51.5%;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 26.2%;
+  }
 }
 
 .table__wrapper {
@@ -11,6 +20,11 @@
   width: 124px;
   height: 56px;
   text-align: center;
+
+  @media (min-width: @tablet-width) {
+    width: 162px;
+    height: 72px;
+  }
 }
 
 .table__value {
@@ -24,6 +38,7 @@
   @media (min-width: @tablet-width) {
     font-size: 30px;
     line-height: 37px;
+    padding-top: 14px;
   }
 }
 
@@ -43,5 +58,8 @@
   @media (min-width: @tablet-width) {
     font-size: 14px;
     line-height: 14px;
+    width: 142px;
+    height: 17px;
+    top: 61px;
   }
 }

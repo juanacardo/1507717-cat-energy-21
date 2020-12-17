@@ -4,7 +4,8 @@
 
   @media (min-width: @tablet-width) {
     flex-direction: row;
-    padding-left: 29px;
+    justify-content: space-between;
+    padding-left: 30px;
     padding-right: 30px;
   }
 
@@ -17,20 +18,27 @@
 .page-header__logo-wrapper {
   padding-right: 23px;
   padding-left: 20px;
-  padding-top: 11px;
-  padding-bottom: 11px;
+  padding-top: 13px;
+  padding-bottom: 14px;
   align-items: center;
   display: flex;
   justify-content: space-between;
   border-bottom: 1px solid @border-grey-1;
 
   @media (min-width: @tablet-width) {
-    width: 25%;
     border: none;
+    padding-right: 0;
+    padding-left: 0;
+    padding-top: 24px;
+    padding-bottom: 24px;
   }
 
   @media (min-width: @desktop-width) {
-    width: 20%;
+    width: 22%;
+    padding-right: 0;
+    padding-left: 98;
+    padding-top: 53px;
+    padding-bottom: 24px;
   }
 }
 
@@ -47,6 +55,11 @@
   width: 100%;
 
   @media (min-width: @tablet-width) {
-    width: 60%;
+    width: 62%;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 575px;
+    padding-right: 96px;
   }
 }

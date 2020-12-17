@@ -11,6 +11,18 @@
   padding-right: 20px;
   padding-bottom: 28px;
   padding-left: 21px;
+
+  @media (min-width: @tablet-width) {
+    padding-right: 30px;
+    padding-left: 30px;
+    padding-top: 43px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-right: 30px;
+    padding-left: 206px;
+    padding-top: 43px;
+  }
 }
 
 .example__header {
@@ -24,6 +36,7 @@
   @media (min-width: @tablet-width) {
     font-size: 60px;
     line-height: 60px;
+    margin-bottom: 63px;
   }
 }
 
@@ -37,11 +50,23 @@
   @media (min-width: @tablet-width) {
     font-size: 20px;
     text-align: right;
+    width: 25%;
+    margin: 0;
+    padding-top: 7px;
+    line-height: 29px;
   }
 
   @media (min-width: @desktop-width) {
     font-size: 20px;
     text-align: left;
+  }
+
+  span {
+
+    @media (min-width: @desktop-width) {
+      display: inline-block;
+      margin-left: 60px;
+    }
   }
 }
 
@@ -53,5 +78,29 @@
   @media (min-width: @tablet-width) {
     font-size: 16px;
     line-height: 24px;
+    margin-bottom: 54px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-bottom: 69px;
+    margin-top: 147px;
+    width: 31%;
   }
 }
+
+.example__table-wrapper {
+
+  @media (min-width: @tablet-width) {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  @media (min-width: @desktop-width) {
+    flex-direction: column;
+  }
+}
+
+.example__image--now {
+  display: none;
+}
+

@@ -7,13 +7,20 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding-left: 30px;
+    padding-right: 31px;
   }
 }
 
 .page-footer__logo {
-  padding-bottom: 32px;
-  padding-top: 39px;
+  padding-bottom: 25px;
+  padding-top: 40px;
   border-bottom: 1px solid @border-grey;
   display: block;
   text-align: center;
+
+  @media (min-width: @tablet-width) {
+    padding-bottom: 57px;
+    padding-top: 61px;
+  }
 }
