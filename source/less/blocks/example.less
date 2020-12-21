@@ -6,40 +6,70 @@
     padding-top: 43px;
     background: @basic-white;
   }
+}
 
+.example__background {
   @media (min-width: @desktop-width) {
-    background: linear-gradient(90deg, @basic-grey 0%, @basic-grey 70%, @special-grey-3 70%, @special-grey-3 100%);
+    background: linear-gradient(to right, @basic-grey 72%, @special-grey-3 28%);
   }
 }
 
 .example__expander {
+
+  &:before {
+    @media (min-width: @desktop-width) {
+      content: "";
+      position: absolute;
+      top: 0;
+      right: 0;
+      z-index: 1;
+      width: 570px;
+      height: 100%;
+      background: linear-gradient(to right, @basic-grey 50%, @special-grey-3 50%);
+    }
+  }
+
   @media (min-width: @tablet-width) {
     width: 100%;
+  }
+
+  @media (min-width: @desktop-width) {
+    display: flex;
+    justify-content: space-between;
+    width: 1220px;
+    position: relative;
   }
 }
 
 .example__wrapper {
   padding-right: 20px;
   padding-left: 21px;
-  margin-bottom: 28px;
 
   @media (min-width: @tablet-width) {
     padding-right: 0;
     padding-left: 0;
+    width: 708px;
+    margin: 0 auto;
   }
 
   @media (min-width: @desktop-width) {
-    padding-right: 30px;
-    padding-left: 206px;
-    padding-top: 43px;
+    margin: 0;
+    width: 570px;
+  }
+}
+
+.example__gradient {
+  @media (min-width: @tablet-width) {
+    background: @special-grey-3;
+  }
+
+  @media (min-width: @desktop-width) {
+    background: none;
+    position: relative;
   }
 }
 
 .example__header {
-  font-family: @oswald;
-  font-weight: 400;
-  font-size: 36px;
-  line-height: 40px;
   margin-top: 0;
   margin-bottom: 33px;
   padding-left: 20px;
@@ -47,7 +77,7 @@
   @media (min-width: @tablet-width) {
     font-size: 60px;
     line-height: 60px;
-    margin-bottom: 63px;
+    margin-bottom: 76px;
     padding: 0;
   }
 }
@@ -63,7 +93,6 @@
   @media (min-width: @tablet-width) {
     font-size: 20px;
     text-align: right;
-    width: 25%;
     margin: 0;
     padding-top: 7px;
     line-height: 29px;
@@ -94,9 +123,6 @@
   }
 
   @media (min-width: @desktop-width) {
-    margin-bottom: 69px;
-    margin-top: 147px;
-    width: 31%;
   }
 }
 
@@ -110,6 +136,13 @@
 
   @media (min-width: @desktop-width) {
     flex-direction: column;
+  }
+}
+
+.example__image--before {
+  @media (min-width: @desktop-width) {
+  position: absolute;
+  z-index: 2;
   }
 }
 

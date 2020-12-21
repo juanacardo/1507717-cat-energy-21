@@ -12,6 +12,7 @@
     z-index: -1;
     background-image: linear-gradient(to top, fade(@basic-green, 85%), fade(@basic-green, 85%)), url("../img/opening-cat.jpg");
     background-repeat: no-repeat;
+    background-position: 50%;
 
     @media (min-width: @tablet-width) {
       transform: translateX(-1000%);
@@ -28,7 +29,8 @@
 }
 
 .opening__wrapper {
-  position: relative;
+  width: 320px;
+  margin: 0 auto;
   padding-right: 20px;
   padding-left: 20px;
   margin-bottom: 22px;
@@ -42,7 +44,6 @@
 
   @media (min-width: @desktop-width) {
     width: 1220px;
-    margin: 0 auto;
     padding-top: 100px;
     padding-left: 81px;
     margin-bottom: 266px;
@@ -50,9 +51,7 @@
 }
 
 .opening__expander {
-  @media (min-width: @desktop-width) {
     width: 100%;
-  }
 }
 
 .opening__title {

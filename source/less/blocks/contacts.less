@@ -1,8 +1,8 @@
 .contacts__text {
   padding-top: 27px;
-  padding-right: 19px;
   padding-bottom: 24px;
-  padding-left: 19px;
+  padding-right: 20px;
+  padding-left: 20px;
   display: flex;
 
   @media (min-width: @tablet-width) {
@@ -16,6 +16,12 @@
   @media (min-width: @desktop-width) {
     padding-right: 89px;
     padding-left: 76px;
+    position: absolute;
+    width: 570px;
+    z-index: 3;
+    top: 96px;
+    left: 110px;
+    background: @basic-white;
   }
 
   &--inner-background {
@@ -47,20 +53,22 @@
   width: 50%;
   padding-top: 2px;
 
+  span {
+    @media (min-width: @tablet-width) {
+      display: inline-block;
+      margin-top: 19px;
+    }
+  }
+
   @media (min-width: @tablet-width) {
     font-size: 16px;
     line-height: 21px;
     text-align: right;
-    width: 25%;
+    width: 159px;
     padding-top: 0;
   }
 
   @media (min-width: @desktop-width) {
     text-align: left;
-  }
-
-  span {
-    display: inline-block;
-    margin-top: 19px;
   }
 }

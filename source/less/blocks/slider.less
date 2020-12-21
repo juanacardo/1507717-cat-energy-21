@@ -4,9 +4,19 @@
   padding-left: 4px;
   display: flex;
   align-items: center;
-  width: 63%;
+  width: 288px;
   margin: 0 auto;
   justify-content: space-between;
+
+  @media (min-width: @tablet-width) {
+    width: 590px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 579px;
+    position: relative;
+    z-index: 2;
+  }
 }
 
 .slider__label {
