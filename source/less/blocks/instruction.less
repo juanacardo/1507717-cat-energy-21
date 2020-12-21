@@ -1,12 +1,18 @@
-.instruction__wrapper {
+.instruction__expander {
+  @media (min-width: @tablet-width) {
+    width: 100%;
+  }
+}
+
+.instruction__grid {
   padding-left: 21px;
   padding-right: 20px;
   padding-bottom: 47px;
 
   @media (min-width: @tablet-width) {
-    padding-left: 30px;
+    padding-left: 0;
     padding-bottom: 87px;
-    padding-right: 30px;
+    padding-right: 0;
     padding-top: 22px;
     border-bottom: 1px solid @border-grey-1;
     display: grid;
@@ -16,9 +22,7 @@
   }
 
   @media (min-width: @desktop-width) {
-    padding-left: 206px;
     padding-bottom: 67px;
-    padding-right: 206px;
     padding-top: 21px;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     column-gap: 80px;
@@ -37,12 +41,11 @@
   @media (min-width: @tablet-width) {
     font-size: 60px;
     line-height: 60px;
-    padding-left: 30px;
     margin-top: 47px;
+    padding-left: 0;
   }
 
   @media (min-width: @desktop-width) {
-    padding-left: 206px;
     margin-top: 71px;
   }
 }
