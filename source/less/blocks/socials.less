@@ -1,8 +1,36 @@
 .socials__wrapper {
-  padding-right: 20px;
-  padding-left: 20px;
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid @border-grey;
+
+  @media (min-width: @tablet-width) {
+    border: none;
+  }
 }
 
 .socials__list {
   .clear-list;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.socials__item {
+  margin-right: 4px;
+
+  &:last-child {
+    margin-right: 0;
+  }
+
+  a {
+    margin: auto;
+    width: 50px;
+    height: 63px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
 }

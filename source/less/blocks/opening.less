@@ -1,23 +1,74 @@
-.opening__wrapper {
+.opening {
   position: relative;
-  padding-right: 20px;
-  padding-left: 20px;
 
   &::before {
     content: "";
-    width: 320px;
+    width: 100%;
     height: 302px;
     position: absolute;
     top: 0;
-    left: 0;
+    left: 50%;
+    transform: translate(-50%);
     z-index: -1;
     background-image: linear-gradient(to top, fade(@basic-green, 85%), fade(@basic-green, 85%)), url("../img/opening-cat.jpg");
+    background-repeat: no-repeat;
+    background-position: 50%;
+
+    @media (min-width: @tablet-width) {
+      transform: translateX(-1000%);
+    }
+
+    @media (min-width: @desktop-width) {
+      width: 50%;
+      height: 694px;
+      right: 0;
+      top: -123px;
+      transform: translate(0);
+    }
   }
+}
+
+.opening__wrapper {
+  width: 320px;
+  margin: 0 auto;
+  padding-right: 20px;
+  padding-left: 20px;
+  margin-bottom: 22px;
+  padding-top: 28px;
+
+  @media (min-width: @tablet-width) {
+    width: 708px;
+    padding-left: 82px;
+    padding-top: 51px;
+    padding-right: 45px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 1220px;
+    padding-top: 100px;
+    padding-left: 81px;
+    margin-bottom: 266px;
+  }
+}
+
+.opening__expander {
+  width: 100%;
 }
 
 .opening__title {
   color: @basic-white;
   text-align: center;
+
+  @media (min-width: @tablet-width) {
+    color: @basic-black;
+    text-align: left;
+    padding-left: 5px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-left: 0;
+    width: 50%;
+  }
 }
 
 .opening__text {
@@ -28,4 +79,46 @@
   text-transform: uppercase;
   color: @basic-white;
   text-align: center;
+  margin-top: 24px;
+  margin-bottom: 29px;
+
+  @media (min-width: @tablet-width) {
+    font-size: 20px;
+    line-height: 20px;
+    color: @basic-black;
+    text-align: left;
+    margin-top: 41px;
+    margin-bottom: 49px;
+    padding-left: 5px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-top: 40px;
+    margin-bottom: 52px;
+    padding-left: 0;
+  }
+}
+
+.opening__image {
+  display: block;
+  margin-bottom: 4px;
+
+  @media (min-width: @tablet-width) {
+    position: absolute;
+  }
+}
+
+.opening__link {
+  padding-top: 10px;
+  padding-right: 73px;
+  padding-bottom: 9px;
+  padding-left: 73px;
+  display: inline-block;
+
+  @media (min-width: @tablet-width) {
+    padding-top: 17px;
+    padding-right: 26px;
+    padding-bottom: 17px;
+    padding-left: 26px;
+  }
 }
