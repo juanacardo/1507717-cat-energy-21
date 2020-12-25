@@ -5,11 +5,89 @@
   line-height: 18px;
   text-transform: uppercase;
   color: @special-dark-grey;
-  display: block;
+  display: flex;
+  width: 100%;
 
-  & input {
+  @media (min-width: @tablet-width) {
+    font-size: 20px;
+    line-height: 30px;
+  }
+
+  input {
     font: inherit;
     text-transform: uppercase;
     color: inherit;
+    padding-top: 12px;
+    padding-right: 15px;
+    padding-bottom: 12px;
+    padding-left: 15px;
+    background-image: none;
+    border: 1px solid @input-grey;
+    flex-grow: 1;
+
+    @media (min-width: @tablet-width) {
+      padding-top: 10px;
+      padding-bottom: 11px;
+      padding-right: 18px;
+      padding-left: 20px;
+    }
+
+    @media (min-width: @desktop-width) {
+      padding-bottom: 10px;
+    }
+  }
+
+  span {
+    display: inline-block;
+    margin-right: 14px;
+    align-self: center;
+
+    @media (min-width: @tablet-width) {
+      margin-right: 16px;
+    }
+  }
+
+  &--email,
+  &--phone {
+
+    @media (min-width: @desktop-width) {
+      width: 569px;
+    }
+
+    span {
+      margin-right: 11px;
+      padding-bottom: 7px;
+
+      @media (min-width: @tablet-width) {
+        padding-bottom: 3px;
+      }
+    }
+
+    input {
+      padding-right: 40px;
+    }
+  }
+
+  &--email {
+
+    @media (min-width: @desktop-width) {
+      margin-bottom: 0;
+    }
+
+    span {
+      @media (min-width: @tablet-width) {
+        margin-right: 22px;
+        padding-bottom: 0;
+      }
+    }
+  }
+
+  &--phone {
+    span {
+      @media (min-width: @tablet-width) {
+      margin-right: 14px;
+      padding-bottom: 0;
+      }
+    }
   }
 }

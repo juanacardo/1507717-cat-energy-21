@@ -21,15 +21,6 @@
     line-height: 30px;
     padding-top: 48px;
   }
-
-  a {
-    text-decoration: none;
-    color: @basic-black;
-
-    @media (min-width: @desktop-width) {
-      color: @basic-white;
-    }
-  }
 }
 
 .main-navigation__item {
@@ -40,5 +31,17 @@
 
   @media (min-width: @tablet-width) {
     border: none;
+  }
+}
+
+.main-navigation__link {
+  text-decoration: none;
+  color: @basic-black;
+
+  &--inner-color {
+
+    @media (min-width: @desktop-width) {
+      color: @basic-white;
+    }
   }
 }

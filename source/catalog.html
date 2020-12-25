@@ -12,7 +12,7 @@
       <header class="page-header page-header__wrapper container">
         <div class="page-header__logo-wrapper">
           <div class="logo_container">
-            <a class="header-logo">
+            <a class="header-logo" href="index.html">
               <img src="img/logo_mobile.svg" alt="Логотип Cat Energy">
             </a>
             <button class="page-header__toggle" type="button">
@@ -24,13 +24,13 @@
         <nav class="page-header__navigation-wrapper main-navigation">
           <ul class="main-navigation__list">
             <li class="main-navigation__item">
-              <a href="index.html">Главная</a>
+              <a class="main-navigation__link main-navigation__link--inner-color" href="index.html">Главная</a>
             </li>
             <li class="main-navigation__item main-navigation__item--active">
-              <a href="catalog.html">Каталог продукции</a>
+              <a class="main-navigation__link main-navigation__link--inner-color" href="catalog.html">Каталог продукции</a>
             </li>
             <li class="main-navigation__item">
-              <a href="form.html">Подбор программы</a>
+              <a class="main-navigation__link main-navigation__link--inner-color" href="form.html">Подбор программы</a>
             </li>
           </ul>
         </nav>
@@ -294,10 +294,12 @@
           <section class="contacts">
             <h2 class="visually-hidden">Контакты организации</h2>
             <div class="container contacts__text">
-              <p class="contacts__invitation">Приглашаем к&nbsp;сотрудничеству дилеров!</p>
-              <p class="contacts__address">ул. Большая Конюшенная, д. 19/8
-                <span>Санкт-Петербург</span>
-              </p>
+              <div class="contacts__wrapper">
+                <p class="contacts__invitation">Приглашаем к&nbsp;сотрудничеству дилеров!</p>
+                <p class="contacts__address">ул. Большая Конюшенная, д. 19/8
+                  <span>Санкт-Петербург</span>
+                </p>
+              </div>
             </div>
             <h2 class="visually-hidden">Карта</h2>
             <div class="map">
@@ -307,7 +309,7 @@
           </section>
 
           <div class="container page-footer__expander">
-            <div class="bottom__wrapper">
+            <div class="page-footer__bottom-wrapper">
               <a class="page-footer__logo footer-logo">
                 <svg width="128" height="24" viewBox="0 0 101 18" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <g clip-path="url(#clip0)">
