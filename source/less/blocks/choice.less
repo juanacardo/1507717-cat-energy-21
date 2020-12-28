@@ -6,9 +6,25 @@
   text-transform: uppercase;
   color: @special-dark-grey-1;
 
+  &:hover span::before {
+    border-color: @input-grey-2;
+  }
+
+  input:focus + span::before {
+    box-shadow: 0px 0px 0px 2px @basic-black;
+  }
+
   @media (min-width: @tablet-width) {
     font-size: 20px;
     line-height: 30px;
+  }
+
+  span {
+    padding-left: 44px;
+
+    @media (min-width: @tablet-width) {
+        padding-left: 59px;
+      }
   }
 
   &--check {
@@ -21,20 +37,13 @@
 
     @media (min-width: @desktop-width) {
       width: 245px;
+      margin-bottom: 0;
     }
 
-    input + span {
-      padding-left: 44px;
-
-      @media (min-width: @tablet-width) {
-        padding-left: 58px;
-      }
-
-      &::before {
+    span::before {
         left: 0;
         top: 3px;
       }
-    }
 
     input:checked + span::before {
       background-image: url("data:image/svg+xml,%3Csvg width='19' height='15' viewBox='0 0 19 15' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M7 11.718L1.3 5.26951L0.25 6.45739L7 14.0938L18.25 1.36648L17.2 0.09375L7 11.718Z' fill='%2368B738'/%3E%3C/svg%3E");
@@ -42,10 +51,9 @@
     }
   }
 
-  input + span {
+  span {
     position: relative;
     display: block;
-    cursor: pointer;
     padding-top: 9px;
     padding-bottom: 3px;
 
@@ -73,32 +81,21 @@
     opacity: 0.3;
   }
 
-  input:hover + span::before {
-    border-color: @input-grey-2;
-  }
-
   &--radio {
-    input + span {
-      padding-left: 44px;
-
-      @media (min-width: @tablet-width) {
-        padding-left: 86px;
-      }
-    }
-
-    input + span::before {
+    span::before {
       border-radius: 50%;
       left: 0;
       top: 3px;
-
-      @media (min-width: @tablet-width) {
-        left: 26px;
-      }
     }
 
     input:checked + span::before {
-      background-image: url("data:image/svg+xml,%3Csvg width='19' height='18' viewBox='0 0 19 18' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cellipse cx='9.94255' cy='9' rx='8.98875' ry='9' fill='%2368B738'/%3E%3C/svg%3E%0A");
-      background-size: 50%;
+      box-shadow: inset 0px 0px 0px 7px @basic-white,
+      inset 0 0 0 14px @basic-green;
+
+      @media (min-width:@tablet-width) {
+        box-shadow: inset 0px 0px 0px 10px @basic-white,
+        inset 0 0 0 20px @basic-green;
+      }
     }
   }
 }
