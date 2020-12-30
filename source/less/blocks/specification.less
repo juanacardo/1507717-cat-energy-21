@@ -4,10 +4,26 @@
   font-size: 12px;
   line-height: 16px;
   color: @special-dark-grey;
+  width: 100%;
+
+  @media (min-width: @tablet-width) {
+    font-size: 16px;
+  }
+}
+
+.specification__line {
+  @media (min-width: @tablet-width) {
+    border-bottom: 1px solid @special-grey-1;
+  }
 }
 
 .specification__data {
+  @media (min-width: @tablet-width) {
+    padding-top: 7px;
+    padding-bottom: 9px;
+  }
+
   &--value {
-    text-align: center;
+    text-align: right;
   }
 }

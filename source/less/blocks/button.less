@@ -10,10 +10,28 @@
   @media (min-width: @tablet-width) {
     font-size: 20px;
   }
+
+  &:hover {
+    background-color: @basic-green-1;
+  }
+
+  &:active {
+    background-color: @basic-green-1;
+    color: fade(@basic-white, 30%);
+  }
 }
 
 .button__special {
   color: @special-dark-grey;
   background-color: @basic-grey;
   font-size: 16px;
+
+  &:hover {
+    background-color: @special-grey;
+  }
+
+  &:active {
+    background-color: @special-grey;
+    color: fade(@special-dark-grey, 30%);
+  }
 }
