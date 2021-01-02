@@ -37,8 +37,29 @@
 .main-navigation__link {
   text-decoration: none;
   color: @basic-black;
+  padding-bottom: 7px;
+
+  &:hover {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+
+  @media (min-width: @tablet-width) {
+    &:not([href]) {
+      border-bottom: 2px solid @basic-green;
+    }
+  }
 
   &--inner-color {
+    @media (min-width: @desktop-width) {
+      &:not([href]) {
+        border-bottom: 2px solid @basic-white;
+      }
+    }
+
     @media (min-width: @desktop-width) {
       color: @basic-white;
     }
