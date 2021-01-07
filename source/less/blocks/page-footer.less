@@ -11,18 +11,26 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding-top: 38px;
+    padding-bottom: 34px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-top: 41px;
   }
 }
 
 .page-footer__logo {
-  padding-top: 40px;
+  padding-top: 39px;
   padding-bottom: 25px;
   border-bottom: 1px solid @border-grey;
   display: block;
   text-align: center;
 
   @media (min-width: @tablet-width) {
-    padding-top: 61px;
-    padding-bottom: 57px;
+    padding: 0;
+    border: none;
+    width: 192px;
+    text-align: left;
   }
 }

@@ -1,3 +1,65 @@
+.main-navigation {
+  position: relative;
+
+  &--closed .main-navigation__list {
+    @media (max-width: @mobile-width-only) {
+      display: none;
+    }
+  }
+
+  &--closed .main-navigation__toggle::before {
+    content: "";
+    position: absolute;
+    top: 13px;
+    left: 50%;
+    transform: translate(-50%);
+    width: 24px;
+    height: 1.5px;
+    background-color: @basic-black;
+    box-shadow: 0 8px 0 0 @basic-black, 0 16px 0 0 @basic-black;
+  }
+
+  &--opened .main-navigation__toggle::before,
+  &--opened .main-navigation__toggle::after {
+    content: "";
+    position: absolute;
+    top: 19px;
+    left: 8px;
+    width: 25px;
+    height: 1.5px;
+    background-color: @basic-black;
+  }
+
+  &--opened .main-navigation__toggle::before {
+    transform: rotate(45deg);
+  }
+
+  &--opened .main-navigation__toggle::after {
+    transform: rotate(-45deg);
+  }
+
+  &--opened .main-navigation__list {
+    @media (max-width: @mobile-width-only) {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 2;
+      background-color: @basic-white;
+      width: 100%;
+      margin: 0 auto;
+    }
+  }
+
+  &--no-js .main-navigation__toggle {
+    display: none;
+  }
+
+  &--no-js .main-navigation__wrapper {
+    position: static;
+  }
+}
+
 .main-navigation__list {
   .clear-list;
   font-family: @oswald;
@@ -8,7 +70,8 @@
 
   @media (min-width: @tablet-width) {
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-end;
+    flex-wrap: wrap;
     font-weight: 400;
     font-size: 18px;
     line-height: 24px;
@@ -19,7 +82,7 @@
     font-weight: 400;
     font-size: 20px;
     line-height: 30px;
-    padding-top: 48px;
+    padding-top: 47px;
   }
 }
 
@@ -31,13 +94,18 @@
 
   @media (min-width: @tablet-width) {
     border: none;
+    margin-left: 36px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-left: 35px;
   }
 }
 
 .main-navigation__link {
   text-decoration: none;
   color: @basic-black;
-  padding-bottom: 7px;
+  padding-bottom: 6px;
 
   &:hover {
     opacity: 0.6;
@@ -63,5 +131,19 @@
     @media (min-width: @desktop-width) {
       color: @basic-white;
     }
+  }
+}
+
+.main-navigation__toggle {
+  border: none;
+  background-color: transparent;
+  position: absolute;
+  top: -54px;
+  right: 13px;
+  width: 40px;
+  height: 40px;
+
+  @media (min-width: @tablet-width) {
+    display: none;
   }
 }
