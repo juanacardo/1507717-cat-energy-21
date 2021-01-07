@@ -3,7 +3,7 @@
   margin: 0 auto;
 
   @media (min-width: @tablet-width) {
-    width: auto;
+    width: 192px;
     margin: 0;
   }
 }
@@ -20,7 +20,12 @@
   padding-bottom: 22px;
 
   @media (min-width: @tablet-width) {
-    padding-top: 17px;
+    padding-top: 16px;
+    justify-content: flex-end;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-top: 18px;
   }
 
   span {
