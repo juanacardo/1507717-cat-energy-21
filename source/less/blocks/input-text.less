@@ -18,8 +18,8 @@
     text-transform: uppercase;
     color: inherit;
     padding-top: 12px;
-    padding-right: 15px;
-    padding-bottom: 12px;
+    padding-right: 12px;
+    padding-bottom: 13px;
     padding-left: 15px;
     background-image: none;
     border: 1px solid @input-grey;
@@ -34,6 +34,7 @@
 
     @media (min-width: @desktop-width) {
       padding-bottom: 10px;
+      padding-left: 18px;
     }
 
     &::placeholder {
@@ -41,21 +42,33 @@
       text-transform: inherit;
       color: inherit;
     }
+
+    &:hover {
+      border: 1px solid @special-grey-1;
+    }
+
+    &:focus {
+      border: 2px solid @special-dark-grey;
+      outline: none;
+    }
   }
 
   span {
     margin-right: 14px;
     align-self: center;
+    flex-shrink: 0;
 
     @media (min-width: @tablet-width) {
-      margin-right: 16px;
+      margin-right: 17px;
     }
   }
 
   &--email,
   &--phone {
+    position: relative;
+
     @media (min-width: @desktop-width) {
-      width: 569px;
+      width: 571px;
     }
 
     span {
@@ -64,6 +77,21 @@
 
     input {
       padding-right: 40px;
+      border: 1px solid @special-grey-1;
+
+      &:hover {
+        border: 1px solid @special-grey-1;
+      }
+
+      &:focus {
+        border: 1px solid @special-grey-1;
+        outline: revert;
+      }
+
+      &:disabled {
+        border: 2px solid @special-dark-grey;
+        background-color: @basic-white;
+      }
     }
   }
 
@@ -77,6 +105,31 @@
         margin-right: 22px;
       }
     }
+
+    svg {
+      position: absolute;
+      top: 15px;
+      right: 15px;
+
+      @media (min-width: @tablet-width) {
+        top: 18px;
+        right: 18px;
+      }
+
+      @media (min-width: @desktop-width) {
+        right: 19px;
+      }
+    }
+
+    & input:disabled + svg line,
+    & input:disabled + svg path {
+      stroke: @basic-green;
+    }
+
+    &.input-text--error input + svg line,
+    &.input-text--error input + svg path {
+      stroke: @status-error;
+    }
   }
 
   &--phone {
@@ -85,5 +138,32 @@
         margin-right: 14px;
       }
     }
+
+    svg {
+      position: absolute;
+      top: 13px;
+      right: 13px;
+
+      @media (min-width: @tablet-width) {
+        top: 16px;
+        right: 17px;
+      }
+
+      @media (min-width: @desktop-width) {
+        top: 15px;
+      }
+    }
+
+    & input:disabled + svg path {
+      fill: @basic-green;
+    }
+
+    &.input-text--error input + svg path {
+      fill: @status-error;
+    }
+  }
+
+  &--error input {
+    border: 2px solid @status-error;
   }
 }

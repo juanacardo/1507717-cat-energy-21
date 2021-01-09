@@ -1,4 +1,10 @@
 .contacts__text {
+  @media (min-width: @desktop-width) {
+    width: 1300px;
+    margin: 0 auto;
+    position: relative;
+  }
+
   &--inner-background {
     background-color: @basic-white;
   }
@@ -24,7 +30,7 @@
     width: 570px;
     z-index: 3;
     top: 96px;
-    left: 110px;
+    left: 40px;
     background: @basic-white;
   }
 
@@ -52,6 +58,13 @@
 
   @media (min-width: @desktop-width) {
     padding-top: 2px;
+  }
+
+  &--form {
+    @media (min-width: @tablet-width) {
+      padding-top: 0;
+      line-height: 27px;
+    }
   }
 }
 
