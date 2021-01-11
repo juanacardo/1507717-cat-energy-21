@@ -3,17 +3,19 @@
   padding-bottom: 35px;
 
   @media (min-width: @tablet-width) {
+    padding-top: 0;
     padding-bottom: 76px;
   }
 
   @media (min-width: @desktop-width) {
+    padding-top: 20px;
     padding-bottom: 86px;
   }
 }
 
 .extra__list {
   .clear-list;
-  padding-top: 23px;
+  padding-top: 34px;
   padding-bottom: 39px;
 
   @media (min-width: @tablet-width) {
@@ -35,18 +37,25 @@
     padding-left: 38px;
     margin-bottom: 80px;
   }
+
+  @media (min-width: @desktop-width) {
+    padding-right: 39px;
+  }
 }
 
 .extra__list-wrapper {
   @media (min-width: @tablet-width) {
     display: flex;
     justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+    margin-bottom: 26px;
   }
 
   @media (min-width: @desktop-width) {
     flex-grow: 1;
     padding-right: 38px;
-    align-items: center;
+    margin-bottom: 0;
   }
 }
 
