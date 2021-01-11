@@ -1,9 +1,65 @@
 .title-decorated {
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 15px;
+    height: 2px;
+    width: 100%;
+    background-color: @basic-green;
+    z-index: 1;
+
+    @media (min-width: @tablet-width) {
+      top: 22px;
+    }
+  }
+
+  span {
+    position: relative;
+    z-index: 2;
+    background-color: @basic-white;
+    display: inline-block;
+    padding-right: 21px;
+
+    @media (min-width: @tablet-width) {
+      padding-right: 39px;
+      padding-left: 39px;
+    }
+
+    @media (min-width: @desktop-width) {
+      padding-left: 0;
+      padding-right: 40px;
+    }
+
+    &::before {
+      content: "";
+      width: 21px;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      left: -21px;
+      background-color: @basic-white;
+
+      @media (min-width: @tablet-width) {
+        display: none;
+      }
+
+      @media (min-width: @desktop-width) {
+        display: block;
+        width: 40px;
+        left: -40px;
+      }
+    }
+  }
+}
+
+.title-decorated__text {
   font-family: @oswald;
   font-weight: 400;
   font-size: 24px;
   line-height: 26px;
-  margin: 0;
 
   @media (min-width: @tablet-width) {
     font-size: 36px;
