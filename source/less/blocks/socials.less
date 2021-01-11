@@ -44,6 +44,14 @@
     width: 53px;
   }
 
+  &:hover svg {
+    fill: @basic-green;
+  }
+
+  &:active svg {
+    fill: fade(@basic-green, 30%);
+  }
+
   &--vkontakte {
     @media (min-width: @tablet-width) {
       padding-right: 4px;
@@ -58,6 +66,15 @@
     @media (min-width: @tablet-width) {
       padding-right: 16px;
       padding-bottom: 11px;
+    }
+
+    &:hover svg {
+      fill: none;
+      stroke: @basic-green;
+    }
+
+    &:active svg {
+      stroke: fade(@basic-green, 30%);
     }
   }
 

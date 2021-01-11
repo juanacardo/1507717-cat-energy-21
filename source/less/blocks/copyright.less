@@ -28,6 +28,18 @@
     padding-top: 18px;
   }
 
+  &:hover svg {
+    fill: @basic-green;
+  }
+
+  &:active {
+    color: fade(@special-dark-grey, 30%);
+
+    svg {
+      fill: fade(@basic-green, 30%);
+    }
+  }
+
   span {
     display: inline-block;
     margin-right: 23px;
