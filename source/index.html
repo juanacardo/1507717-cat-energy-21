@@ -12,8 +12,12 @@
       <header class="page-header page-header__wrapper">
         <div class="page-header__logo-wrapper">
           <div class="page-header__logo-container">
-            <a class="header-logo">
-              <img src="img/logo_mobile.svg" alt="Логотип Cat Energy">
+            <a>
+              <picture>
+                <source media="(min-width: 1440px)" srcset="../img/header_logo-desktop.svg">
+                <source media="(min-width: 768px)" srcset="../img/header_logo-tablet.svg">
+                <img src="../img/header_logo-mobile.svg" alt="Логотип Cat Energy">
+              </picture>
             </a>
           </div>
         </div>
@@ -42,7 +46,11 @@
           <div class="opening__wrapper container">
             <h1 class="title opening__title">Функциональное <br>питание для котов</h1>
             <p class="opening__text">Занялся собой? Займись котом!</p>
-            <img class="opening__image" src="img/opening.png" width="280" height="270" alt="Упаковка питания Cat Energy Pro, курица, 500гр.">
+            <picture>
+              <source media="(min-width: 1440px)" srcset="../img/opening-desktop.png 1x, ../img/opening-desktop@2x.png 2x">
+              <source media="(min-width: 768px)" srcset="../img/opening-tablet.png 1x, ../img/opening-tablet@2x.png 2x">
+              <img class="opening__image" src="../img/opening-mobile.png" srcset="../img/opening-mobile@2x.png 2x" width="280" height="270" alt="Упаковка питания Cat Energy Pro, курица, 500гр.">
+            </picture>
             <a class="opening__link button" href="form.html">Подобрать программу</a>
           </div>
         </section>
@@ -54,10 +62,6 @@
             <p class="program__description program__description--slim">Ваш кот весит больше собаки и почти утратил способность лазить по деревьям? Пора на диету! Cat Energy Slim поможет вашему питомцу сбросить лишний вес.</p>
             <a class="program__link" href="#">
               <span>Каталог Slim</span>
-              <svg width="24" height="12" viewBox="0 0 24 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <line y1="6" x2="18" y2="6" stroke="black" stroke-width="2"/>
-                <path d="M24 6L17.25 11.1962L17.25 0.803848L24 6Z" fill="black"/>
-              </svg>
             </a>
           </div>
           <div class="program program--pro program__wrapper">
@@ -65,10 +69,6 @@
             <p class="program__description program__description--pro">Заработать авторитет среди дворовых котов и даже собак? Серия Cat Energy Pro поможет вашему коту нарастить необходимые <br>мышцы!</p>
             <a class="program__link" href="#">
               <span>Каталог Pro</span>
-              <svg width="24" height="12" viewBox="0 0 24 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <line y1="6" x2="18" y2="6" stroke="black" stroke-width="2"/>
-                <path d="M24 6L17.25 11.1962L17.25 0.803848L24 6Z" fill="black"/>
-              </svg>
             </a>
           </div>
         </section>
@@ -121,14 +121,22 @@
 
               <div class="example__gradient">
                 <div class="example__wrapper example__wrapper--padding">
-                  <img src="img/cat-fat.png" class="example__image example__image--before" width="311" height="232" alt="Фотография кота Бориса до похудения">
-                  <img src="" class="example__image example__image--now" width="251" height="240" alt="Фотография кота Бориса сейчас">
+                  <picture>
+                    <source media="(min-width: 1440px)" srcset="../img/before-tablet.png 1x, ../img/before-tablet@2x.png 2x">
+                    <source media="(min-width: 768px)" srcset="../img/before-tablet.png 1x, ../img/before-tablet@2x.png 2x">
+                    <img class="example__image example__image--before" src="../img/before-mobile.png" srcset="../img/before-mobile@2x.png 2x" width="284" height="240" alt="Фотография кота Бориса до похудения">
+                  </picture>
+                  <picture>
+                    <source media="(min-width: 1440px)" srcset="../img/after-tablet.png 1x, ../img/after-tablet@2x.png 2x">
+                    <source media="(min-width: 768px)" srcset="../img/after-tablet.png 1x, ../img/after-tablet@2x.png 2x">
+                    <img class="example__image example__image--after example__image--noshow" src="../img/after-mobile.png" srcset="../img/after-mobile@2x.png 2x" width="251" height="240" alt="Фотография кота Бориса сейчас">
+                  </picture>
                   <div class="slider slider__wrapper">
-                    <button type="button" class="slider__label">Было</button>
+                    <button type="button" class="slider__label slider__label--before">Было</button>
                       <div class="slider__scale">
                         <button class="slider__bar"></button>
                       </div>
-                    <button type="button" class="slider__label">Стало</button>
+                    <button type="button" class="slider__label slider__label--after">Стало</button>
                   </div>
                 </div>
               </div>
@@ -152,7 +160,11 @@
           <h2 class="visually-hidden">Карта</h2>
           <div class="map">
             <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.5991043651586!2d30.320894616097!3d59.938794181876254!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca5ba729%3A0xea9c53d4493c879f!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LCDQodCw0L3QutGCLdCf0LXRgtC10YDQsdGD0YDQsywgMTkxMTg2!5e0!3m2!1sru!2sru!4v1605703085854!5m2!1sru!2sru" width="320" height="362" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
-              <img src="img/map-mobile.jpg" width="320" height="362" alt="Офис организации на карте">
+            <picture>
+              <source media="(min-width: 1440px)" srcset="../img/location-desktop.jpg 1x, ../img/location-desktop@2x.jpg 2x">
+              <source media="(min-width: 768px)" srcset="../img/location-tablet.jpg 1x, ../img/location-tablet@2x.jpg 2x">
+              <img src="../img/location-mobile.jpg" srcset="../img/location-mobile@2x.jpg 2x" width="320" height="362" alt="Офис организации на карте">
+            </picture>
           </div>
         </section>
 
