@@ -16,3 +16,10 @@ navToggle.addEventListener('click', function() {
     navMain.classList.remove('main-navigation--opened');
   }
 });
+
+buttonAfter.onclick = function() {
+  if (imageAfter.classList.contains('example__image--noshow')) {
+    imageAfter.classList.remove('example__image--noshow');
+    imageBefore.classList.add('example__image--noshow');
+  }
+}
