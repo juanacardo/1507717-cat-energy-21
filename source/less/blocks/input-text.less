@@ -97,10 +97,6 @@
     input:disabled + svg {
       fill: @basic-green;
     }
-
-    &.input-text--error input + svg {
-      fill: @status-error;
-    }
   }
 
   &--email {
@@ -153,7 +149,11 @@
     }
   }
 
-  &--error input {
+  &--error input:required {
     border: 2px solid @status-error;
   }
+
+  &--error input:required + svg {
+      fill: @status-error;
+    }
 }
