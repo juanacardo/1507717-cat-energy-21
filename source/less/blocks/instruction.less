@@ -1,11 +1,11 @@
 .instruction {
-  padding-top: 28px;
+  padding-top: 29px;
   padding-bottom: 47px;
 
   @media (min-width: @tablet-width) {
     border-bottom: 1px solid @border-grey-1;
-    padding-top: 47px;
-    padding-bottom: 85px;
+    padding-top: 46px;
+    padding-bottom: 87px;
   }
 
   @media (min-width: @desktop-width) {
@@ -20,7 +20,7 @@
     display: grid;
     grid-template-columns: 1fr 1fr;
     column-gap: 59px;
-    row-gap: 79px;
+    row-gap: 80px;
   }
 
   @media (min-width: @desktop-width) {
@@ -30,9 +30,10 @@
 }
 
 .instruction__header {
-  margin-bottom: 34px;
+  margin-bottom: 32px;
 
   @media (min-width: @tablet-width) {
+    margin-bottom: 34px;
     font-size: 60px;
     line-height: 60px;
     padding-left: 0;
@@ -46,7 +47,7 @@
   padding-top: 10px;
   padding-left: 79px;
   margin-top: 0;
-  margin-bottom: 17px;
+  margin-bottom: 16px;
 
   &:last-child {
     margin-bottom: 0;
@@ -67,11 +68,13 @@
   &::before {
     content: "";
     position: absolute;
-    top: 7px;
+    top: 9px;
     left: 0;
     width: 60px;
     height: 60px;
-    background-size: 100%;
+    background-color: @basic-green;
+    background-repeat: no-repeat;
+    background-position: center;
 
     @media (min-width: @tablet-width) {
       width: 80px;
@@ -81,23 +84,19 @@
   }
 
   &--healthy::before {
-    background-image: url("../img/healthy.png");
-    background-repeat: no-repeat;
+    background-image: url("../img/healthy.svg");
   }
 
   &--fast::before {
-    background-image: url("../img/fast.png");
-    background-repeat: no-repeat;
+    background-image: url("../img/fast.svg");
   }
 
   &--change::before {
-    background-image: url("../img/change.png");
-    background-repeat: no-repeat;
+    background-image: url("../img/change.svg");
   }
 
   &--time::before {
-    background-image: url("../img/time.png");
-    background-repeat: no-repeat;
+    background-image: url("../img/time.svg");
   }
 
   &--healthy::after {

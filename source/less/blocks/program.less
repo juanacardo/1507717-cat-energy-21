@@ -1,7 +1,7 @@
 .program {
   position: relative;
   background-color: @basic-grey;
-  padding-top: 31px;
+  padding-top: 29px;
   padding-right: 20px;
   padding-left: 20px;
 
@@ -70,9 +70,10 @@
   text-transform: uppercase;
   text-decoration: none;
   color: @basic-black;
-  display: block;
   padding-top: 19px;
   padding-bottom: 22px;
+  display: flex;
+  align-items: center;
 
   @media (min-width: @tablet-width) {
     font-size: 20px;
@@ -87,32 +88,36 @@
     padding-top: 0;
   }
 
-  & span {
-    margin-right: 11px;
-
-    @media (min-width: @tablet-width) {
-      margin-right: 21px;
-    }
-
-    @media (min-width: @desktop-width) {
-      margin-right: 23px;
-    }
-  }
-
-  &:hover svg {
-    width: 32px;
-  }
-
-  &:active {
+  :active {
     color: fade(@basic-black, 30%);
   }
 
-  &:active line {
-    stroke: fade(@basic-black, 30%);
+  &::after {
+    content: "";
+    width: 32px;
+    height: 10px;
+    background-image: url("data:image/svg+xml,%3Csvg width='24' height='12' viewBox='0 0 24 12' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cline y1='6' x2='18' y2='6' stroke='black' stroke-width='2'/%3E%3Cpath d='M24 6L17.25 11.1962L17.25 0.803848L24 6Z' fill='black'/%3E%3C/svg%3E%0A");
+    background-repeat: no-repeat;
   }
 
-  &:active path {
-    fill: fade(@basic-black, 30%);
+  &:hover::after {
+    background-image: url("data:image/svg+xml,%3Csvg width='32' height='12' viewBox='0 0 32 12' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cline y1='6' x2='26' y2='6' stroke='black' stroke-width='2'/%3E%3Cpath d='M32 6L25.25 11.1962L25.25 0.803848L32 6Z' fill='black'/%3E%3C/svg%3E%0A");
+  }
+
+  &:active::after {
+    background-image: url("data:image/svg+xml,%3Csvg width='32' height='12' viewBox='0 0 32 12' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cline y1='6' x2='26' y2='6' stroke='%23B3B3B3' stroke-width='2'/%3E%3Cpath d='M32 6L25.25 11.1962L25.25 0.803848L32 6Z' fill='%23B3B3B3'/%3E%3C/svg%3E");
+  }
+
+  span {
+    margin-right: 15px;
+
+    @media (min-width: @tablet-width) {
+      margin-right: 26px;
+    }
+
+    @media (min-width: @desktop-width) {
+      margin-right: 28px;
+    }
   }
 }
 
@@ -120,7 +125,7 @@
   color: @special-dark-grey;
   border-bottom: 1px solid @border-grey;
   margin: 0;
-  padding-bottom: 23px;
+  padding-bottom: 22.5px;
   line-height: 18px;
 
   @media (min-width: @tablet-width) {
@@ -135,7 +140,7 @@
   @media (min-width: @desktop-width) {
     width: 100%;
     min-height: 79px;
-    padding-bottom: 27px;
+    padding-bottom: 26px;
   }
 
   &--slim {
@@ -184,7 +189,7 @@
     width: 200px;
     height: 200px;
     left: auto;
-    right: 62px;
+    right: 61px;
     top: 91px;
   }
 
