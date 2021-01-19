@@ -41,6 +41,7 @@
       font: inherit;
       text-transform: inherit;
       color: inherit;
+      opacity: 1;
     }
 
     &:hover {
@@ -48,8 +49,14 @@
     }
 
     &:focus {
-      border: 2px solid @special-dark-grey;
+      box-shadow: 0 0 0 2px @special-dark-grey;
       outline: none;
+    }
+
+    &:disabled {
+      border-color: @input-grey-2;
+      opacity: 0.3;
+      background-color: @basic-white;
     }
   }
 
@@ -77,25 +84,14 @@
 
     input {
       padding-right: 40px;
-      border: 1px solid @special-grey-1;
+    }
 
-      &:hover {
-        border: 1px solid @special-grey-1;
-      }
-
-      &:focus {
-        border: 1px solid @special-grey-1;
-        outline: revert;
-      }
-
-      &:disabled {
-        border: 2px solid @special-dark-grey;
-        background-color: @basic-white;
-      }
+    input:focus + svg {
+      fill: @basic-green;
     }
 
     input:disabled + svg {
-      fill: @basic-green;
+      fill-opacity: 0.3;
     }
   }
 

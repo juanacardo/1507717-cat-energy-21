@@ -3,7 +3,7 @@ const navToggle = document.querySelector('.main-navigation__toggle');
 const buttonBefore = document.querySelector('.slider__label--before');
 const buttonAfter = document.querySelector('.slider__label--after');
 const imageBefore = document.querySelector('.example__image--before');
-const imageAfter = document.querySelector('example__image--after');
+const imageAfter = document.querySelector('.example__image--after');
 
 navMain.classList.remove('main-navigation--no-js');
 
@@ -21,5 +21,12 @@ buttonAfter.onclick = function() {
   if (imageAfter.classList.contains('example__image--noshow')) {
     imageAfter.classList.remove('example__image--noshow');
     imageBefore.classList.add('example__image--noshow');
+  }
+}
+
+buttonBefore.onclick = function() {
+  if (imageBefore.classList.contains('example__image--noshow')) {
+    imageBefore.classList.remove('example__image--noshow');
+    imageAfter.classList.add('example__image--noshow');
   }
 }
