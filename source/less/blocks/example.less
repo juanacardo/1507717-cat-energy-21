@@ -143,6 +143,7 @@
   }
 
   @media (min-width: @desktop-width) {
+    width: 439px;
     margin-bottom: 69px;
   }
 }
@@ -150,16 +151,8 @@
 .example__br {
   display: none;
 
-  @media (min-width: @desktop-width) {
+  @media (min-width: @tablet-width) and (max-width: 1439px) {
     display: inline;
-  }
-
-  &--tablet {
-    display: none;
-
-    @media (min-width: @tablet-width) and (max-width: 1439px) {
-      display: inline;
-    }
   }
 }
 
