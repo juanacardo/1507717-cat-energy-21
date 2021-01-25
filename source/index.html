@@ -126,22 +126,28 @@
 
               <div class="example__gradient">
                 <div class="example__wrapper example__wrapper--padding">
-                  <picture>
-                    <source type="image/webp" media="(min-width: 1440px)" srcset="img/before-tablet.webp 1x, img/before-tablet@2x.webp 2x">
-                    <source type="image/webp" media="(min-width: 768px)" srcset="img/before-tablet.webp 1x, img/before-tablet@2x.webp 2x">
-                    <source type="image/webp" srcset="img/before-mobile.webp 1x, img/before-mobile@2x.webp 2x">
-                    <source media="(min-width: 1440px)" srcset="img/before-tablet.png 1x, img/before-tablet@2x.png 2x">
-                    <source media="(min-width: 768px)" srcset="img/before-tablet.png 1x, img/before-tablet@2x.png 2x">
-                    <img class="example__image example__image--before" src="img/before-mobile.png" srcset="img/before-mobile@2x.png 2x" width="284" height="240" alt="Фотография кота Бориса до похудения">
-                  </picture>
-                  <picture>
-                    <source type="image/webp" media="(min-width: 1440px)" srcset="img/after-tablet.webp 1x, img/after-tablet@2x.webp 2x">
-                    <source type="image/webp" media="(min-width: 768px)" srcset="img/after-tablet.webp 1x, img/after-tablet@2x.webp 2x">
-                    <source type="image/webp" srcset="img/after-mobile.webp 1x, img/after-mobile@2x.webp 2x">
-                    <source media="(min-width: 1440px)" srcset="img/after-tablet.png 1x, img/after-tablet@2x.png 2x">
-                    <source media="(min-width: 768px)" srcset="img/after-tablet.png 1x, img/after-tablet@2x.png 2x">
-                    <img class="example__image example__image--after example__image--noshow" src="img/after-mobile.png" srcset="img/after-mobile@2x.png 2x" width="251" height="240" alt="Фотография кота Бориса сейчас">
-                  </picture>
+                  <div class="cat-slider">
+                    <div class="cat-slider__frame cat-slider__frame--before">
+                      <picture>
+                        <source type="image/webp" media="(min-width: 1440px)" srcset="img/before-tablet.webp 1x, img/before-tablet@2x.webp 2x">
+                        <source type="image/webp" media="(min-width: 768px)" srcset="img/before-tablet.webp 1x, img/before-tablet@2x.webp 2x">
+                        <source type="image/webp" srcset="img/before-mobile.webp 1x, img/before-mobile@2x.webp 2x">
+                        <source media="(min-width: 1440px)" srcset="img/before-tablet.png 1x, img/before-tablet@2x.png 2x">
+                        <source media="(min-width: 768px)" srcset="img/before-tablet.png 1x, img/before-tablet@2x.png 2x">
+                        <img class="cat-slider__image cat-slider__image--before" src="img/before-mobile.png" srcset="img/before-mobile@2x.png 2x" width="284" height="240" alt="Фотография кота Бориса до похудения">
+                      </picture>
+                    </div>
+                    <div class="cat-slider__frame cat-slider__frame--after cat-slider__frame--hide">
+                      <picture>
+                        <source type="image/webp" media="(min-width: 1440px)" srcset="img/after-tablet.webp 1x, img/after-tablet@2x.webp 2x">
+                        <source type="image/webp" media="(min-width: 768px)" srcset="img/after-tablet.webp 1x, img/after-tablet@2x.webp 2x">
+                        <source type="image/webp" srcset="img/after-mobile.webp 1x, img/after-mobile@2x.webp 2x">
+                        <source media="(min-width: 1440px)" srcset="img/after-tablet.png 1x, img/after-tablet@2x.png 2x">
+                        <source media="(min-width: 768px)" srcset="img/after-tablet.png 1x, img/after-tablet@2x.png 2x">
+                        <img class="cat-slider__image cat-slider__image--after" src="img/after-mobile.png" srcset="img/after-mobile@2x.png 2x" width="251" height="240" alt="Фотография кота Бориса сейчас">
+                      </picture>
+                    </div>
+                  </div>
                   <div class="slider slider__wrapper">
                     <button type="button" class="slider__label slider__label--before" aria-label="Перейти к фотографии толстого кота Бориса">Было</button>
                       <div class="slider__scale">
@@ -226,7 +232,7 @@
           </p>
         </div>
       </footer>
-    <script src="js/script.min.js"></script>
     </div>
+    <script src="js/script.min.js"></script>
   </body>
 </html>
