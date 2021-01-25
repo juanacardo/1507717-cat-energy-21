@@ -1,6 +1,10 @@
 .opening {
   position: relative;
 
+  @media (min-width: @desktop-width) {
+    position: static;
+  }
+
   &::before {
     content: "";
     width: 100%;
@@ -26,7 +30,6 @@
       width: 50%;
       height: 694px;
       right: 0;
-      top: -128px;
       transform: translateX(0);
       background-image: linear-gradient(to top, fade(@basic-green, 85%), fade(@basic-green, 85%)), url("../img/opening_background-desktop.jpg");
 
@@ -112,7 +115,7 @@
 
   @media (min-width: @desktop-width) {
     width: 552px;
-    top: 14px;
+    top: 141px;
     transform: translate(0);
     left: auto;
     right: 330px;

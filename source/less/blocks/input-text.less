@@ -49,7 +49,8 @@
     }
 
     &:focus {
-      box-shadow: 0 0 0 2px @special-dark-grey;
+      border: 1px solid @special-dark-grey;
+      box-shadow: 0 0 0 1px @special-dark-grey;
       outline: none;
     }
 
@@ -96,10 +97,6 @@
   }
 
   &--email {
-    @media (min-width: @desktop-width) {
-      margin-bottom: 0;
-    }
-
     span {
       @media (min-width: @tablet-width) {
         margin-right: 22px;

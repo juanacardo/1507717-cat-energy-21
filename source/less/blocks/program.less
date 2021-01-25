@@ -28,12 +28,10 @@
     margin-bottom: 31px;
   }
 
-  @media (min-width: @desktop-width) {
-    margin-bottom: 0;
-  }
-
   &:last-child {
-    margin-bottom: 0;
+    @media (max-width: @tablet-width) {
+      margin-bottom: 0;
+    }
   }
 }
 
