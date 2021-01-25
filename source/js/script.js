@@ -17,16 +17,20 @@ navToggle.addEventListener("click", function() {
   }
 });
 
-buttonAfter.onclick = function() {
-  if (imageAfter.classList.contains("example__image--noshow")) {
-    imageAfter.classList.remove("example__image--noshow");
-    imageBefore.classList.add("example__image--noshow");
+if(buttonAfter) {
+  buttonAfter.onclick = function() {
+    if (imageAfter.classList.contains("example__image--noshow")) {
+      imageAfter.classList.remove("example__image--noshow");
+      imageBefore.classList.add("example__image--noshow");
+    }
   }
 }
 
-buttonBefore.onclick = function() {
-  if (imageBefore.classList.contains("example__image--noshow")) {
-    imageBefore.classList.remove("example__image--noshow");
-    imageAfter.classList.add("example__image--noshow");
+if(buttonBefore) {
+  buttonBefore.onclick = function() {
+    if (imageBefore.classList.contains("example__image--noshow")) {
+      imageBefore.classList.remove("example__image--noshow");
+      imageAfter.classList.add("example__image--noshow");
+    }
   }
 }
