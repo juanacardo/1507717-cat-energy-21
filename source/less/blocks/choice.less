@@ -24,12 +24,25 @@
 
     @media (min-width: @tablet-width) {
       width: 287px;
-      margin-bottom: 30px;
+      margin-bottom: 24px;
+      margin-right: 57px;
     }
 
     @media (min-width: @desktop-width) {
       width: 245px;
-      margin-bottom: 0;
+      margin-right: 80px;
+    }
+
+    &:nth-child(2n) {
+      @media (min-width: @tablet-width) and (max-width: @desktop-width - 1) {
+        margin-right: 0;
+      }
+    }
+
+    &:nth-child(4n) {
+      @media (min-width: @desktop-width) {
+        margin-right: 0;
+      }
     }
 
     span::before {
@@ -47,7 +60,7 @@
     position: relative;
     display: block;
     padding-top: 9px;
-    padding-bottom: 3px;
+    padding-bottom: 9px;
     padding-left: 45px;
 
     @media (min-width: @tablet-width) {
